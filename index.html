@@ -11,16 +11,25 @@
 	</div>
 </body>
 
+//id=iw4oRym4HSM&rel=0&controls=0&start=67&autoplay=1
+
+//https://www.youtube-nocookie.com/embed/iw4oRym4HSM&rel=0&controls=0&start=67&autoplay=1
+//https://www.youtube-nocookie.com/embed/iw4oRym4HSM?rel=0&controls=0&start=67
+//
 <footer>
     <script> 
 	container.style.width = window.innerHeight;
 	container.style.height = window.innerWidth;
+	const id = location.search.slice(1).split('&')[0].slice(3)
+	const elems = location.search.slice(1).split('&').slice(1).join('&')
+	const src = `https://www.youtube-nocookie.com/embed/${id}?${elems}`
+	console.log('SRC', src)
 	container.innerHTML = 
 	`<iframe 
-		id=video
-		width="${window.innerWidth + 'px'}" 
-		height="${window.innerHeight + 'px'}" 
-		src="https://www.youtube-nocookie.com/embed/${location.search.slice(1)}"
+		id="video"
+		width="${window.innerWidth}px" 
+		height="${window.innerHeight}px" 
+		src="${src}"
 		frameborder="0"
 		allow="autoplay; encrypted-media"
 		sandbox="allow-scripts allow-same-origin allow-presentation">
