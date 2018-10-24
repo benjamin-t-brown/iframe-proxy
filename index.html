@@ -23,10 +23,8 @@
 		src="https://www.youtube-nocookie.com/embed/${location.search.slice(1)}"
 		frameborder="0"
 		allow="autoplay; encrypted-media"
-		sandbox="allow-scripts allow-same-origin">
+		sandbox="allow-scripts allow-same-origin allow-presentation">
 	</iframe>`
-	console.log("PARAMS", getUrlVars());
-
 	// Fill the iframe
 	let video = document.getElementById('container');
 	video.style.width = window.innerHeight + 'px';
